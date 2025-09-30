@@ -46,6 +46,62 @@ Best for: When you have good understanding of underlying data distributions, med
 How it works: Fits a straight line (or hyperplane) through data to predict continuous values: y = mx + b.
 Best for: Predicting continuous values, understanding relationships between variables, when relationships are roughly linear.
 
+1. Gradient Boosting (XGBoost, LightGBM, CatBoost)
+How it works: Builds trees sequentially, where each new tree corrects errors from previous ones. Combines many weak learners into a strong one.
+Best for: Tabular data competitions (Kaggle winner!), structured data. Often outperforms Random Forests.
+
+2. Naive Bayes
+How it works: Uses Bayes' theorem to calculate probability of each class. Assumes features are independent (naive assumption).
+Best for: Text classification, spam filtering, fast training with limited data.
+
+3. Logistic Regression
+How it works: Despite the name, it's for classification! Uses sigmoid function to predict probability of classes.
+Best for: Binary classification, when you need probabilities, interpretable models, baseline comparisons.
+
+4. Principal Component Analysis (PCA)
+How it works: Dimensionality reduction - finds the most important directions (components) in high-dimensional data.
+Best for: Reducing features before modeling, visualization, removing noise, handling multicollinearity.
+
+5. Autoencoders
+How it works: Neural network that compresses data into lower dimension then reconstructs it. Learns efficient representations.
+Best for: Dimensionality reduction, anomaly detection, denoising, feature learning.
+
+6. Transformers (BERT, GPT, Attention mechanisms)
+How it works: Uses "attention" to focus on relevant parts of input. Processes sequences in parallel (unlike LSTM's sequential processing).
+Best for: Modern NLP (language models like ChatGPT), machine translation, any sequence modeling. Has largely replaced LSTMs.
+
+7. Reinforcement Learning (Q-Learning, DQN, PPO)
+How it works: Agent learns by trial-and-error through rewards/penalties. Learns optimal actions in an environment.
+Best for: Game playing, robotics, autonomous systems, resource optimization.
+
+8. Gaussian Processes
+How it works: Non-parametric Bayesian approach. Defines distribution over functions, provides uncertainty estimates.
+Best for: Small datasets where uncertainty matters, optimization, spatial modeling.
+
+9. Ensemble Methods (Voting, Stacking, Blending)
+How it works: Combines predictions from multiple models to improve performance.
+Best for: Competition settings, critical applications, squeezing out extra performance.
+
+10. Recurrent Neural Networks (RNN - the basic version)
+How it works: Neural network with loops allowing information persistence. LSTM is an improved version that solves RNN's vanishing gradient problem.
+Best for: Less common now (LSTM/Transformers are better), but foundational for understanding sequential models.
+
+11. GANs (Generative Adversarial Networks)
+How it works: Two networks compete - Generator creates fake data, Discriminator tries to detect fakes. Both improve together.
+Best for: Image generation, data augmentation, style transfer, creating synthetic data.
+
+12. DBSCAN (Density-Based Clustering)
+How it works: Clusters based on density of points. Can find arbitrary-shaped clusters and identify outliers.
+Best for: Clustering when you don't know number of clusters, finding outliers, spatial data.
+
+Hierarchical Clustering - builds tree of clusters
+Apriori/Association Rules - market basket analysis
+Hidden Markov Models - speech recognition, bioinformatics
+t-SNE/UMAP - visualization of high-dimensional data
+Isolation Forest - anomaly detection
+AdaBoost - early boosting algorithm
+Elastic Net - regularized linear models (L1+L2)
+
 Quick Decision Guide:
 Small dataset (<1000 samples): KNN, SVM, Decision Trees
 Medium dataset (1000-100k): Random Forest, SVM, Gradient Boosting
