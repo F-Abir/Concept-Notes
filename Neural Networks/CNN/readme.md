@@ -182,7 +182,6 @@ CNNs mimic the way humans see the world: from local patterns to global structure
 7. **Fully Connected Layers:** Map features to classes/values.  
 8. **Output:** Produce probability maps, classifications, or regressions.  
 9. **Validation:** Compare against ground truth with accepted standards.  
-<img width="1280" height="706" alt="image" src="https://github.com/user-attachments/assets/177585d1-87fb-4730-82a6-cb9898b639d7" />
 
 ---
 
