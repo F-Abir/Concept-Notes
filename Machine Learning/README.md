@@ -75,7 +75,8 @@ y = f(x; \theta) + \epsilon
 
 **Conceptual Interpretation:** ML searches for the function \( f \) that best minimizes \(\epsilon\) across all data.
 
-![Mechanism Flow of Machine Learning](machine_learning_flow.png)
+
+
 ---
 
 ## 5. The Conceptual Vocabulary
@@ -97,7 +98,7 @@ y = f(x; \theta) + \epsilon
 
 ## 6. A Mind Map of Understanding
 
-![Mind Map of Machine Learning](machine_learning_mindmap.png)
+<img width="1280" height="913" alt="image" src="https://github.com/user-attachments/assets/ab5bb38a-4cf8-4b07-91fe-2946039fa9f7" />
 
 
 ---
@@ -165,6 +166,7 @@ ML is like teaching a map-maker not through rules but through examples of correc
 - **Acceptable Ranges:** LULC classification generally acceptable at ≥85% accuracy.  
 - **Validation Protocols:** Independent test datasets, confusion matrices.  
 - **Industry Benchmarks:** NMAS (US), INSPIRE (EU), Bangladesh Survey Dept. accuracy codes.
+<img width="1280" height="830" alt="image" src="https://github.com/user-attachments/assets/3abede0d-e766-4a98-b2e6-d84876e88ca9" />
 
 ---
 
@@ -200,7 +202,8 @@ P(y=1|x) = \frac{1}{1 + e^{-(\beta_0 + \beta_1x_1 + \beta_2x_2 + ... + \beta_nx_
 - **Core Analysis:** Train ML classifier → predict spatial categories.  
 - **Post-processing:** Correct artifacts → generalize small patches.  
 - **Validation:** Quantitative accuracy metrics → qualitative visual checks.  
-![Workflow Architecture of Machine Learning](machine_learning_workflow.png)
+<img width="1280" height="706" alt="image" src="https://github.com/user-attachments/assets/28d66ce9-0ac2-4bf0-a881-5ca74afd4aea" />
+
 
 ---
 
