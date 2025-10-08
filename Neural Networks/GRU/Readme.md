@@ -37,6 +37,13 @@ It achieved similar performance on tasks like speech recognition and time-series
 Geospatial datasets (e.g., rainfall sequences, vegetation indices, soil moisture, temperature) are typically irregular, noisy, and often incomplete.  
 LSTMs, though expressive, may overfit due to their complexity, while simple RNNs fail to capture delayed effects such as seasonal or climatic persistence.  
 GRUs, therefore, strike a balance: they retain essential long-term spatial-temporal memory while maintaining computational efficiency — ideal for modeling evolving Earth system dynamics like drought progression, flood recurrence, or vegetation cycles.
+RNN (1990s) ──▶ suffers from vanishing gradient
+        │
+        ▼
+LSTM (1997) ──▶ solves with many gates, too heavy
+        │
+        ▼
+GRU (2014) ──▶ merges gates, lightweight + efficient
 
 ---
 
@@ -72,6 +79,13 @@ Consider predicting vegetation greenness (NDVI) over the course of a year.
 - The **reset gate** helps the model “forget” irrelevant past data (e.g., previous monsoon cycle).  
 - The **update gate** allows the model to “remember” persistent drought patterns.  
 Together, these gates create a temporally aware system that dynamically adjusts its memory span to reflect real-world seasonal and environmental variability.
+Input X_t ─┐
+            ├──► Reset Gate (r_t) ─┐
+h_(t-1) ────┘                     │
+                                   ▼
+                      Candidate Activation (h̃_t)
+                                   │
+Input X_t ───► Update Gate (z_t) ──┴─► Output Hidden State (h_t)
 
 ---
 
@@ -102,6 +116,16 @@ Where:
 
 ### Interpretation
 The GRU’s structure ensures memory smoothness. Instead of abrupt changes, it allows gradual transitions — an ideal property for modeling continuous environmental processes like temperature or vegetation growth.
+[Input X_t] + [Prev Memory h_(t-1)]
+      │
+      ▼
+  Compute z_t (update) & r_t (reset)
+      │
+      ▼
+Combine → Candidate (h̃_t)
+      │
+      ▼
+Weighted Blend → Final State h_t
 
 ---
 
@@ -140,6 +164,19 @@ Tertiary Nodes (Applications):
 - NDVI time-series forecasting  
 - Rainfall-runoff modeling  
 - Climate anomaly detection  
+                GRU
+                 │
+ ┌─────────────────────────────────────┐
+ │                                     │
+ Memory Mechanism                  Learning Dynamics
+ │                                 │
+ ├── Reset Gate                    ├── Update Gate
+ └── Selective Forgetting          └── Adaptive Updating
+                 │
+        Geospatial Applications
+       ├── NDVI Forecasting
+       ├── Rainfall Runoff
+       └── Flood Dynamics
 
 ---
 
@@ -205,7 +242,13 @@ Historically, GRU was a simplification of LSTM (2014), but in remote sensing and
 - **R² (Coefficient of Determination):** Measures explained variance.  
 - **SSIM (Structural Similarity Index):** Evaluates spatial coherence.  
 - **NSE (Nash-Sutcliffe Efficiency):** Common in hydrology for temporal performance.  
+🖼️ Performance Dashboard Mockup:
 
+Metric	Value	Interpretation
+RMSE	↓ Low	Accurate
+R²	↑ High	Strong correlation
+SSIM	>0.85	Preserved spatial pattern
+NSE	>0.75	Stable temporal evolution
 **Analysis Methods:**
 - Temporal cross-validation across multiple seasons or years.  
 - Lag correlation analysis to test memory persistence.  
