@@ -1,9 +1,3 @@
-> 🖼️ *Preview: GRU Mind Map (Central Node: GRU)*  
-> - **Core Principles:** Memory gating, adaptive forgetting  
-> - **Mechanisms:** Reset & Update Gates  
-> - **Outputs:** Hidden State Evolution  
-> - **Applications:** Vegetation dynamics, flood progression  
-
 
 # 🧠 Comprehensive Concept Note on Gated Recurrent Unit (GRU)
 *A Deep Theoretical and Research-Oriented Framework for Spatio-Temporal Intelligence in Geospatial Science*
